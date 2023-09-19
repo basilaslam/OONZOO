@@ -1,6 +1,5 @@
 import mongoose from 'mongoose'
 
-
 let dbInstance : unknown;
 
 const connectDB = async () => {
@@ -12,6 +11,8 @@ const connectDB = async () => {
 
         dbInstance = connectionInstance;
         console.log(`\n☘️  MongoDB Connected! Db host: ${connectionInstance.connection.host}\n`)
+            
+
     }catch(error){
         console.log("MongoDB connection error: ", error)
         process.exit(1)
